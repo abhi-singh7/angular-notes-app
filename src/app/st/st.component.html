@@ -1,0 +1,41 @@
+<!-- <div class="col-xm-12">
+    <button class="btn btn-success">New note</button>
+  </div> -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="pull-left">
+      <div  *ngFor="let note of notes">
+        <div class="list-group-item clearfix" *ngIf="note.category == 'Science and Tech'">
+        <div class="list-group-item-heading" >
+          <h4
+            class="list-group-item-heading"
+
+          >
+            {{ note.category }}
+          </h4>
+        </div>
+
+        <div class="list-group-item-text" >
+          <h5
+            class="list-group-item-text"
+
+          >
+            <button
+              type="button"
+              class="btn btn-link"
+              (click)="onClick(note.url)"
+            >
+              {{ note.url }}
+            </button>
+          </h5>
+        </div>
+
+        <p class="list-group-item-text" >
+          {{ note.description }}
+        </p>
+        <!-- <a href="{{ note.url }}" target="_blank">note</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>

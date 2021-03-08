@@ -1,0 +1,13 @@
+<div class="topnav">
+  <!-- <a routerLinkActive="active" routerLink="">Home</a> -->
+  <a  routerLinkActive="active" routerLink="" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a  routerLinkActive="active" routerLink="new" *ngIf="!isAuthenticated">Add New</a>
+  <a routerLinkActive="active" routerLink="st" *ngIf="!isAuthenticated">Science and Tech</a>
+  <a routerLinkActive="active" routerLink="news" *ngIf="isAuthenticated">News</a>
+  <a routerLinkActive="active" routerLink="entertainment" *ngIf="isAuthenticated">Entertainment</a>
+  <a routerLinkActive="active" routerLink="general" *ngIf="isAuthenticated">General</a>
+  <a routerLinkActive="active" class="logout" routerLink="logout" *ngIf="isAuthenticated">Log Out</a>
+  <a routerLinkActive="active" class="login" routerLink="login" *ngIf="!isAuthenticated">Log In</a>
+  <a routerLinkActive="active" class="login" routerLink="signup" *ngIf="!isAuthenticated">Sign Up</a>
+  <!-- <a routerLinkActive="active"  routerLink="admin">Admin</a> -->
+</div>

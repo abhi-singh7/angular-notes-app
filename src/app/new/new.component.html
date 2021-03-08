@@ -1,0 +1,36 @@
+<form>
+  <div class="form-group">
+    <label for="URL">Link address</label>
+    <input
+      type="url"
+      class="col-sm-5 form-control"
+      id="url"
+      placeholder="URL"
+      #urlinput
+    />
+  </div>
+  <div class="form-group">
+    <label for="category">Select category</label>
+    <select class="col-sm-2 form-control" id="category"
+    #categoryinput>
+      <option>Science and Tech</option>
+      <option>News</option>
+      <option>entertainment</option>
+      <option>general</option>
+
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="details">Details</label>
+    <textarea class="col-sm-5 form-control" id="details" rows="3"
+    #detailsinput></textarea>
+  </div>
+</form>
+<div class="row">
+  <div class="col-md-12">
+    <button type="button" class="btn btn-success" (click)="onAddNotes()">Add notes</button>
+    <button type="button" class="btn btn-danger">Clear</button>
+  </div>
+</div>
+
+
